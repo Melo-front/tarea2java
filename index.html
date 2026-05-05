@@ -114,8 +114,39 @@
                         <li>La promesa se queda en un estado incierto indefinidamente (promesa pendiente)</li>
                     </ul>
                 </li>
-                
+                <hr>
+                <li>Las promesas en Javascript son un tipo de dato, como lo es un number  o un string. Son un  de tipo promise. Cuando obtengamos uno de estos objetos (generalmente, devuelto por una función) sabemos que tenemos una promesa que puede que se cumpla en un futuro cercano o lejano.
+                Podemos trabajar con promesas de varias formas. Una de ellas es usar los thennables, donde se utiliza un método llamado .then() (entonces). Observa la siguiente tabla:</li>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Métodos</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.then(FUNCTION resolve)</code></td>
+                        <td>Ejecuta la función cuando la promesa se cumple.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.catch(FUNCTION reject)</code></td>
+                        <td>Ejecuta la función cuando la promesa se rechaza.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.then(FUNCTION resolve, FUNCTION reject)</code></td>
+                        <td>Equivale a las 2 anteriores en el mismo .then().</td>
+                    </tr>
+                    <tr>
+                        <td><code>.finally(FUNCTION end)</code></td>
+                        <td>Ejecuta la función cuando sale de pendiente.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
             </ul>
+            
+
             </div>
         <div class="col-12 col-md-6">
             <div>
@@ -156,11 +187,50 @@
         
     </section>
 
+    <section class="promesas">
+        <div class="d-flex justify-content-center align-items-center">
+            <h2>Fetch</h2>
+        </div>
+        <div class="d-flex flex-column flex-md-row">
+            <div class="d-flex justify-content-center align-items-center">
+            <ul>
+                
+                <li>Fetch es el nombre de una nueva API para Javascript con la cuál podemos realizar peticiones HTTP asíncronas utilizando promesas y de forma que el código sea un poco más sencillo y menos verbose. La forma de realizar una petición es muy sencilla, básicamente se trata de llamar a fetch y pasarle por parámetro la URL de la petición a realizar:
+                </li>
+                <hr>
+                <li>El fetch() devolverá una promesa que será aceptada cuando reciba una respuesta y sólo será rechazada si hay un fallo de red o si por alguna razón no se pudo completar la petición.</li>
+            
+    
+            </ul>
+            
+
+            </div>
+        <div class="col-12 col-md-6">
+            <div>
+                <h3>Ejemplo</h3>
+            </div>
+            <div class="conteiner consola-js">
+                <pre><code class="language-js">
+                const promise = fetch("/robots.txt");
+
+                promise.then(function(response) {
+                /* ... */
+                });
+                </code></pre>
+            </div>
+            
+        </div>
+        </div>
+        
+    </section>
+
+
 
     <footer class="bg-dark text-white p-3">
         <ul>
-            <li><a href="https://www.freecodecamp.org/espanol/news/javascript-bucles-explicados-for-while-loops/">freecodecamp</a> </li>
-            <li><a href="https://lenguajejs.com/asincronia/promesas/que-son/">lenguajejs.com</a></li>
+            <li><a href="https://www.freecodecamp.org/espanol/news/javascript-bucles-explicados-for-while-loops/">FreeCodeCamp. (s.f.). <i>Bucles en JavaScript: for y while</i>. Recuperado de https://www.freecodecamp.org/espanol/news/javascript-bucles-explicados-for-while-loops</a> </li>
+            <li><a href="https://lenguajejs.com/asincronia/promesas/que-son/">LenguajeJS. (s.f.). <i>¿Qué son las promesas en JavaScript?</i>. Recuperado de https://lenguajejs.com/asincronia/promesas/que-son/</a></li>
+            <li><a href="https://lenguajejs.com/javascript/peticiones-http/fetch/">LenguajeJS. (s.f.). <i>Fetch en JavaScript</i>. Recuperado de https://lenguajejs.com/javascript/peticiones-http/fetch</a></li>
         </ul>
     </footer>
 
