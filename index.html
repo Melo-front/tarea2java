@@ -101,34 +101,20 @@
 
     <section class="promesas">
         <div class="d-flex justify-content-center align-items-center">
-            <h2>Ciclos/loops</h2>
+            <h2>Promesas</h2>
         </div>
         <div class="d-flex flex-column flex-md-row">
             <div class="d-flex justify-content-center align-items-center">
             <ul>
-                <li>En JavaScript los bucles (loops) son utilizados para realizar tareas repetitivas con base en una condición. Las condiciones típicamente devuelven true (verdadero) o false(falso) al ser evaluados. El bucle continuará ejecutándose hasta que la condición devuelva  false.</li>
-                <li>Los tres tipos más comunes de bucles son:
+                
+                <li> En la programación al igual que en la vida real, una promesa es algo que en principio pensamos que se cumplirá en el futuro, pero a medida que pasa el tiempo pueden ocurrir varias cosas:
                     <ul>
-                        <li>for</li>
-                        <li>while</li>
-                        <li>do while</li>
+                        <li>La promesa se cumple (promesa resuelta)</li>
+                        <li>La promesa no se cumple (promesa rechazada)</li>
+                        <li>La promesa se queda en un estado incierto indefinidamente (promesa pendiente)</li>
                     </ul>
                 </li>
-                <h2>for loop</h2>
-                <li>inicialización - Sucede antes de la primera ejecución del bucle. Esta expresión es comúnmente utilizada para crear contadores. Las variables creadas tienen un alcance (scope) limitado al cuerpo del bucle. Una vez que el bucle ha terminado su ejecución las variables son destruidas.</li>
-                <li>condición - Expresión que es evaluada antes de la ejecución de cada iteración. Si se omite, esta expresión es evaluada como verdadera. Si devuelve true, la sentencia del cuerpo del bucle se ejecuta. Si devuelve false, el bucle se detiene.</li>
-                <li>expresión-final - Expresión que se ejecuta luego de cada iteración. Usualmente es utilizada para incrementar un contador. Pero también puede ser utilizada para decrementar el contador.</li>
-                <li>sentencia o declaración - Código que será ejecutado repetidamente por el bucle.</li>
-                <hr>
-                <h2>while loop</h2>
-                <li>El bucle while empieza por evaluar la condición. Si la condición es verdadera (devuelve true), entonces las sentencias son ejecutadas. Si la condición es falsa (devuelve false), entonces las sentencias no son ejecutadas. Luego el bucle finaliza.</li>
-                <li>sentencia(s): Una sentencia es código que se ejecuta si la condición devuelve verdadero ( true ).</li>
-                <li>condición: Es una expresión booleana (Boolean) que es evaluada antes de cada paso (iteración) por el bucle. Si esta condición evalúa a verdadero ( true ), las sentencias son ejecutadas. Cuando la condición evalúa a falso ( false ), la ejecución continúa con la siguiente sentencia luego del bucle while.</li>
-                <hr>
-                <h2>Do...while loop</h2>
-                <li>El bucle  do...while está cercanamente relacionado al bucle while . En el bucle  do...while , la condición se evalúa al final.</li>
-                <li>sentencia(s): Una sentencia es ejecutada por lo menos una vez antes de que la condición o expresión booleana sea evaluada y es re-ejecutada cada vez que la condición devuelve true.</li>
-                <li>condición: Aquí la condición es una expresión booleana. Si la expresión booleana evalúa a true, las sentencias son ejecutadas de nuevo. Cuando la expresión booleana devuelve false, el bucle finaliza.</li>
+                
             </ul>
             </div>
         <div class="col-12 col-md-6">
@@ -137,47 +123,31 @@
             </div>
             <div class="conteiner consola-js">
                 <pre><code class="language-js">
-                for ([initializacion]); [condicion]; [expresion-final]) {
-                    sentencia;
-                }
+                const miPromesa = new Promise((resolve, reject) => {
+                    let exito = true;
 
-                let frutas=["manzana", "pera","piña","mora","banano"];
-
-
-                for(a in frutas){
-                    console.log(frutas[a])
-                }
-
-
-                while (condicion){
-
-                    sentencia;
-
+                    if (exito) {
+                        resolve("Todo salió bien");
+                    } else {
+                        reject("Hubo un error");
                     }
+                });
 
-                let edades=[18,30,40,35,22,50];
-                let i=0
-                while(i &lt edades.length){
-                    console.log(edades[i]);
-                    i++;
-                }
+                miPromesa
+                    .then(resultado => {
+                        console.log(resultado); 
+                    })
+                    .catch(error => {
+                        console.log(error); 
+                    });
 
-                do {
+                const promesa = new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve("Datos cargados");
+                    }, 2000);
+                });
 
-                Sentencia;
-
-                } while (*condicion*);
-
-                let frutas=["manzana", "pera","piña","mora","banano"];
-
-                let p=0;
-
-                do{
-                    console.log(frutas[p]);
-                    p++;
-
-                } while(p &lt frutas.length)
-
+                promesa.then(data => console.log(data));
                 </code></pre>
             </div>
             
@@ -190,10 +160,12 @@
     <footer class="bg-dark text-white p-3">
         <ul>
             <li><a href="https://www.freecodecamp.org/espanol/news/javascript-bucles-explicados-for-while-loops/">freecodecamp</a> </li>
+            <li><a href="https://lenguajejs.com/asincronia/promesas/que-son/">lenguajejs.com</a></li>
         </ul>
     </footer>
 
     <script src="js/ciclos.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="js/promesa.js" defer></script>
 </body>
 </html>
