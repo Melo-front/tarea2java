@@ -3,13 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet"/>
     <title>Tarea 2 Java</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    
+    <section>
+        <h1 class="text-center pt-5 bg-dark text-white pb-5"> Tarea 2 Java </h1>
+    </section>
+    <section class="Ciclo">
+        <div class="d-flex justify-content-center align-items-center">
+            <h2>Ciclos/loops</h2>
+        </div>
+        <div class="d-flex flex-column flex-md-row">
+            <div class="d-flex justify-content-center align-items-center">
+            <ul>
+                <li>En JavaScript los bucles (loops) son utilizados para realizar tareas repetitivas con base en una condición. Las condiciones típicamente devuelven true (verdadero) o false(falso) al ser evaluados. El bucle continuará ejecutándose hasta que la condición devuelva  false.</li>
+                <li>Los tres tipos más comunes de bucles son:
+                    <ul>
+                        <li>for</li>
+                        <li>while</li>
+                        <li>do while</li>
+                    </ul>
+                </li>
+                <h2>for loop</h2>
+                <li>inicialización - Sucede antes de la primera ejecución del bucle. Esta expresión es comúnmente utilizada para crear contadores. Las variables creadas tienen un alcance (scope) limitado al cuerpo del bucle. Una vez que el bucle ha terminado su ejecución las variables son destruidas.</li>
+                <li>condición - Expresión que es evaluada antes de la ejecución de cada iteración. Si se omite, esta expresión es evaluada como verdadera. Si devuelve true, la sentencia del cuerpo del bucle se ejecuta. Si devuelve false, el bucle se detiene.</li>
+                <li>expresión-final - Expresión que se ejecuta luego de cada iteración. Usualmente es utilizada para incrementar un contador. Pero también puede ser utilizada para decrementar el contador.</li>
+                <li>sentencia o declaración - Código que será ejecutado repetidamente por el bucle.</li>
+                <hr>
+                <h2>while loop</h2>
+                <li>El bucle while empieza por evaluar la condición. Si la condición es verdadera (devuelve true), entonces las sentencias son ejecutadas. Si la condición es falsa (devuelve false), entonces las sentencias no son ejecutadas. Luego el bucle finaliza.</li>
+                <li>sentencia(s): Una sentencia es código que se ejecuta si la condición devuelve verdadero ( true ).</li>
+                <li>condición: Es una expresión booleana (Boolean) que es evaluada antes de cada paso (iteración) por el bucle. Si esta condición evalúa a verdadero ( true ), las sentencias son ejecutadas. Cuando la condición evalúa a falso ( false ), la ejecución continúa con la siguiente sentencia luego del bucle while.</li>
+                <hr>
+                <h2>Do...while loop</h2>
+                <li>El bucle  do...while está cercanamente relacionado al bucle while . En el bucle  do...while , la condición se evalúa al final.</li>
+                <li>sentencia(s): Una sentencia es ejecutada por lo menos una vez antes de que la condición o expresión booleana sea evaluada y es re-ejecutada cada vez que la condición devuelve true.</li>
+                <li>condición: Aquí la condición es una expresión booleana. Si la expresión booleana evalúa a true, las sentencias son ejecutadas de nuevo. Cuando la expresión booleana devuelve false, el bucle finaliza.</li>
+            </ul>
+            </div>
+        <div class="col-12 col-md-6">
+            <div>
+                <h3>Ejemplo</h3>
+            </div>
+            <div class="conteiner consola-js">
+                <pre><code class="language-js">
+                for ([initializacion]); [condicion]; [expresion-final]) {
+                    sentencia;
+                }
 
+                let frutas=["manzana", "pera","piña","mora","banano"];
+
+
+                for(a in frutas){
+                    console.log(frutas[a])
+                }
+
+
+                while (condicion){
+
+                    sentencia;
+
+                    }
+
+                let edades=[18,30,40,35,22,50];
+                let i=0
+                while(i &lt edades.length){
+                    console.log(edades[i]);
+                    i++;
+                }
+
+                do {
+
+                Sentencia;
+
+                } while (*condicion*);
+
+                let frutas=["manzana", "pera","piña","mora","banano"];
+
+                let p=0;
+
+                do{
+                    console.log(frutas[p]);
+                    p++;
+
+                } while(p &lt frutas.length)
+
+                </code></pre>
+            </div>
+            
+        </div>
+        </div>
+        
+    </section>
+
+    <section class="promesas">
+        <div class="d-flex justify-content-center align-items-center">
+            <h2>Ciclos/loops</h2>
+        </div>
+        <div class="d-flex flex-column flex-md-row">
+            <div class="d-flex justify-content-center align-items-center">
+            <ul>
+                <li>En JavaScript los bucles (loops) son utilizados para realizar tareas repetitivas con base en una condición. Las condiciones típicamente devuelven true (verdadero) o false(falso) al ser evaluados. El bucle continuará ejecutándose hasta que la condición devuelva  false.</li>
+                <li>Los tres tipos más comunes de bucles son:
+                    <ul>
+                        <li>for</li>
+                        <li>while</li>
+                        <li>do while</li>
+                    </ul>
+                </li>
+                <h2>for loop</h2>
+                <li>inicialización - Sucede antes de la primera ejecución del bucle. Esta expresión es comúnmente utilizada para crear contadores. Las variables creadas tienen un alcance (scope) limitado al cuerpo del bucle. Una vez que el bucle ha terminado su ejecución las variables son destruidas.</li>
+                <li>condición - Expresión que es evaluada antes de la ejecución de cada iteración. Si se omite, esta expresión es evaluada como verdadera. Si devuelve true, la sentencia del cuerpo del bucle se ejecuta. Si devuelve false, el bucle se detiene.</li>
+                <li>expresión-final - Expresión que se ejecuta luego de cada iteración. Usualmente es utilizada para incrementar un contador. Pero también puede ser utilizada para decrementar el contador.</li>
+                <li>sentencia o declaración - Código que será ejecutado repetidamente por el bucle.</li>
+                <hr>
+                <h2>while loop</h2>
+                <li>El bucle while empieza por evaluar la condición. Si la condición es verdadera (devuelve true), entonces las sentencias son ejecutadas. Si la condición es falsa (devuelve false), entonces las sentencias no son ejecutadas. Luego el bucle finaliza.</li>
+                <li>sentencia(s): Una sentencia es código que se ejecuta si la condición devuelve verdadero ( true ).</li>
+                <li>condición: Es una expresión booleana (Boolean) que es evaluada antes de cada paso (iteración) por el bucle. Si esta condición evalúa a verdadero ( true ), las sentencias son ejecutadas. Cuando la condición evalúa a falso ( false ), la ejecución continúa con la siguiente sentencia luego del bucle while.</li>
+                <hr>
+                <h2>Do...while loop</h2>
+                <li>El bucle  do...while está cercanamente relacionado al bucle while . En el bucle  do...while , la condición se evalúa al final.</li>
+                <li>sentencia(s): Una sentencia es ejecutada por lo menos una vez antes de que la condición o expresión booleana sea evaluada y es re-ejecutada cada vez que la condición devuelve true.</li>
+                <li>condición: Aquí la condición es una expresión booleana. Si la expresión booleana evalúa a true, las sentencias son ejecutadas de nuevo. Cuando la expresión booleana devuelve false, el bucle finaliza.</li>
+            </ul>
+            </div>
+        <div class="col-12 col-md-6">
+            <div>
+                <h3>Ejemplo</h3>
+            </div>
+            <div class="conteiner consola-js">
+                <pre><code class="language-js">
+                for ([initializacion]); [condicion]; [expresion-final]) {
+                    sentencia;
+                }
+
+                let frutas=["manzana", "pera","piña","mora","banano"];
+
+
+                for(a in frutas){
+                    console.log(frutas[a])
+                }
+
+
+                while (condicion){
+
+                    sentencia;
+
+                    }
+
+                let edades=[18,30,40,35,22,50];
+                let i=0
+                while(i &lt edades.length){
+                    console.log(edades[i]);
+                    i++;
+                }
+
+                do {
+
+                Sentencia;
+
+                } while (*condicion*);
+
+                let frutas=["manzana", "pera","piña","mora","banano"];
+
+                let p=0;
+
+                do{
+                    console.log(frutas[p]);
+                    p++;
+
+                } while(p &lt frutas.length)
+
+                </code></pre>
+            </div>
+            
+        </div>
+        </div>
+        
+    </section>
+
+
+    <footer class="bg-dark text-white p-3">
+        <ul>
+            <li><a href="https://www.freecodecamp.org/espanol/news/javascript-bucles-explicados-for-while-loops/">freecodecamp</a> </li>
+        </ul>
+    </footer>
 
     <script src="js/ciclos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
 </body>
 </html>
